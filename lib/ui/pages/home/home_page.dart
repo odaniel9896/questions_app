@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:questions_app/ui/components/components.dart';
-import 'package:questions_app/ui/themes/app_colors.dart';
+import '../../components/components.dart';
+import '../../themes/app_colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
