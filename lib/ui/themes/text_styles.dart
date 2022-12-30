@@ -18,4 +18,9 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.gray,
   );
+  static final toolbar = GoogleFonts.nunito(
+    fontSize: 14,
+    color: Colors.black,
+    fontWeight: FontWeight.w400,
+  );
 }
