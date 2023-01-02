@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:questions_app/ui/pages/home/components/card_question.dart';
 import 'package:questions_app/ui/pages/home/components/input_search.dart';
 import 'package:questions_app/ui/themes/text_styles.dart';
 import '../../components/components.dart';
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 14),
                   child: Container(
                     height: size.height,
                     decoration: const BoxDecoration(
@@ -94,45 +95,74 @@ class _HomePageState extends State<HomePage> {
                           topLeft: Radius.circular(32),
                           topRight: Radius.circular(32)),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: DefaultTabController(
-                        length: 4,
-                        child: Scaffold(
-                          backgroundColor: Colors.red,
-                          appBar: AppBar(
-                              backgroundColor: Colors.transparent,
-                              elevation: 0,
-                              toolbarHeight: 0,
-                              bottom: const TabBar(
-                                indicatorColor: AppColors.primary,
-                                indicatorSize: TabBarIndicatorSize.label,
-                                labelColor: AppColors.gray,
-                                tabs: [
-                                  Tab(
-                                    text: "Vapo",
-                                  ),
-                                  Tab(
-                                    text: "Vapo",
-                                  ),
-                                  Tab(
-                                    text: "Vapo",
-                                  ),
-                                  Tab(
-                                    text: "Vapo",
-                                  )
-                                ],
-                              )),
-                          body: const TabBarView(
-                            children: [
-                              Text("vapovapo"),
-                              Text("vapsdadsasovapo"),
-                              Text("test"),
-                              Text("vaptsdsadovapo")
-                            ],
+                    child: Stack(
+                      alignment: AlignmentDirectional.topCenter,
+                      children: [
+                        Positioned(
+                          top: 16,
+                          child: Container(
+                            width: 48,
+                            height: 4,
+                            decoration: const BoxDecoration(
+                                color: AppColors.primary,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(32))),
                           ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 25),
+                          child: DefaultTabController(
+                            length: 4,
+                            child: Scaffold(
+                              backgroundColor: Colors.white,
+                              appBar: AppBar(
+                                  backgroundColor: Colors.transparent,
+                                  elevation: 0,
+                                  toolbarHeight: 0,
+                                  bottom: const TabBar(
+                                    indicatorColor: AppColors.primary,
+                                    indicatorSize: TabBarIndicatorSize.label,
+                                    labelColor: AppColors.primary,
+                                    unselectedLabelColor: AppColors.gray,
+                                    tabs: [
+                                      Tab(
+                                        text: "Popular",
+                                      ),
+                                      Tab(
+                                        text: "Ciencia",
+                                      ),
+                                      Tab(
+                                        text: "Math",
+                                      ),
+                                      Tab(
+                                        text: "Comp",
+                                      )
+                                    ],
+                                  )),
+                              body: TabBarView(
+                                children: [
+                                  SingleChildScrollView(
+                                    padding:
+                                        const EdgeInsetsDirectional.only(bottom: 20),
+                                    child: Column(
+                                      children: const [
+                                        CardQuestion(),
+                                        CardQuestion(),
+                                        CardQuestion(),
+                                        CardQuestion(),
+                                        CardQuestion(),
+                                      ],
+                                    ),
+                                  ),
+                                  const Icon(Icons.directions_transit, size: 350),
+                                  const Icon(Icons.directions_car, size: 350),
+                                  const Icon(Icons.directions_car, size: 350),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),

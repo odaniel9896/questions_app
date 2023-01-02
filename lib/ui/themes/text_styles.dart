@@ -23,4 +23,16 @@ class TextStyles {
     color: Colors.black,
     fontWeight: FontWeight.w400,
   );
+
+  static final titleCourse = GoogleFonts.ubuntu(
+    fontSize: 16,
+    color: AppColors.primary,
+    fontWeight: FontWeight.w500,
+  );
+
+  static final subTitleCourse = GoogleFonts.nunito(
+    fontSize: 14,
+    color: AppColors.fullGray,
+    fontWeight: FontWeight.w400,
+  );
 }
