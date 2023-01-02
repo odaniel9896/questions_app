@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:questions_app/ui/components/appbar/custom_appbar.dart';
 import 'package:questions_app/ui/components/components.dart';
+import 'package:questions_app/ui/pages/details/components/components.dart';
+import 'package:questions_app/ui/pages/details/components/explication_list.dart';
 import 'package:questions_app/ui/themes/app_colors.dart';
 import 'package:questions_app/ui/themes/text_styles.dart';
 
@@ -94,69 +96,21 @@ class DetailsPage extends StatelessWidget {
                                   style: TextStyles.detailsTitle,
                                 )),
                           ),
-                          Container(
-                            decoration: const BoxDecoration(),
-                            // height: 40,
-                            child: ListTile(
-                              leading: Container(
-                                height: 200,
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.black),
-                                child: const Icon(
-                                  Icons.list,
-                                  size: 40,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                              title: Text("10 Questões",
-                                  style: TextStyles.detailsTitle),
-                              subtitle: Text("10 pontos para cada questão",
-                                  style: TextStyles.subTitleCourse),
-                            ),
+                          const ExplicationList(
+                            title: "10 Questões",
+                            subtitle: "10 pontos para cada questão",
+                            icon: Icons.list,
                           ),
-                          Container(
-                            decoration: const BoxDecoration(),
-                            // height: 40,
-                            child: ListTile(
-                              leading: Container(
-                                height: 40,
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.black),
-                                child: const Icon(
-                                  Icons.alarm_outlined,
-                                  size: 40,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                              title: Text("1 Hora e 15 minutos",
-                                  style: TextStyles.detailsTitle),
-                              subtitle: Text("Duração máximo do teste",
-                                  style: TextStyles.subTitleCourse),
-                            ),
+                          const ExplicationList(
+                            title: "1 Hora e 15 minutos",
+                            subtitle: "Duração máxima do teste",
+                            icon: Icons.alarm_outlined,
                           ),
-                          Container(
-                            decoration: const BoxDecoration(),
-                            // height: 40,
-                            child: ListTile(
-                              leading: Container(
-                                height: 200,
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.black),
-                                child: const Icon(
-                                  Icons.star_outline,
-                                  size: 40,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                              title: Text("Ganhe 10 estrelas",
-                                  style: TextStyles.detailsTitle),
-                              subtitle: Text("Responda todas as questões corretamente",
-                                  style: TextStyles.subTitleCourse),
-                            ),
-                          ),
+                          const ExplicationList(
+                              title: "Ganhe 10 estrelas",
+                              subtitle:
+                                  "Responda todas as questões corretamente.",
+                              icon: Icons.star_outline),
                           Padding(
                             padding: const EdgeInsets.only(
                                 top: 10, left: 24, right: 24, bottom: 10),
@@ -165,23 +119,7 @@ class DetailsPage extends StatelessWidget {
                               style: TextStyles.detailsTitle,
                             ),
                           ),
-                          const ListTile(
-                            contentPadding: EdgeInsets.only(left: 25),
-                            title: Text(
-                                "\u2022 10 Pontos para cada respota correta e nenhum para resposta incorreta"),
-                          ),
-                          const ListTile(
-                            contentPadding: EdgeInsets.only(left: 25),
-                            title: Text(
-                              "\u2022 Clique em uma opção para marcar a resposta correta.",
-                            ),
-                          ),
-                          const ListTile(
-                            contentPadding: EdgeInsets.only(left: 25),
-                            title: Text(
-                              "\u2022 Clique no marcador para salvar a sua resposta .",
-                            ),
-                          ),
+                          const BulletInfoList(),
                         ],
                       ),
                     ),
