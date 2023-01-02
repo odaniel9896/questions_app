@@ -47,4 +47,10 @@ class TextStyles {
     color: AppColors.textColor,
     fontWeight: FontWeight.w700,
   );
+
+  static final explicationText = GoogleFonts.nunito(
+    fontSize: 14,
+    color: AppColors.textColor,
+    fontWeight: FontWeight.w400,
+  );
 }

@@ -85,24 +85,103 @@ class DetailsPage extends StatelessWidget {
                             ),
                           ),
                           Container(
+                            decoration: const BoxDecoration(),
+                            margin: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Padding(
+                                padding: const EdgeInsets.only(top: 24),
+                                child: Text(
+                                  "Uma explicação sobre o quiz",
+                                  style: TextStyles.detailsTitle,
+                                )),
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(),
+                            // height: 40,
+                            child: ListTile(
+                              leading: Container(
+                                height: 200,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.black),
+                                child: const Icon(
+                                  Icons.list,
+                                  size: 40,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              title: Text("10 Questões",
+                                  style: TextStyles.detailsTitle),
+                              subtitle: Text("10 pontos para cada questão",
+                                  style: TextStyles.subTitleCourse),
+                            ),
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(),
+                            // height: 40,
+                            child: ListTile(
+                              leading: Container(
+                                height: 40,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.black),
+                                child: const Icon(
+                                  Icons.alarm_outlined,
+                                  size: 40,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              title: Text("1 Hora e 15 minutos",
+                                  style: TextStyles.detailsTitle),
+                              subtitle: Text("Duração máximo do teste",
+                                  style: TextStyles.subTitleCourse),
+                            ),
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(),
+                            // height: 40,
+                            child: ListTile(
+                              leading: Container(
+                                height: 200,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.black),
+                                child: const Icon(
+                                  Icons.star_outline,
+                                  size: 40,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              title: Text("Ganhe 10 estrelas",
+                                  style: TextStyles.detailsTitle),
+                              subtitle: Text("Responda todas as questões corretamente",
+                                  style: TextStyles.subTitleCourse),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 10, left: 24, right: 24, bottom: 10),
                             child: Text(
-                              "Uma explicação sobre o quiz",
+                              "Por favor, leia o texto abaixo com atenção para que você possa compreender.",
                               style: TextStyles.detailsTitle,
                             ),
-                          )
-                          // Column(
-                          //   children: [
-
-                          //     Text(
-                          //       "Uma explicação sobre o quiz",
-                          //       style: TextStyles.detailsTitle,
-                          //     ),
-                          //     Text(
-                          //       "Uma explicação sobre o quiz",
-                          //       style: TextStyles.detailsTitle,
-                          //     )
-                          //   ],
-                          // )
+                          ),
+                          const ListTile(
+                            contentPadding: EdgeInsets.only(left: 25),
+                            title: Text(
+                                "\u2022 10 Pontos para cada respota correta e nenhum para resposta incorreta"),
+                          ),
+                          const ListTile(
+                            contentPadding: EdgeInsets.only(left: 25),
+                            title: Text(
+                              "\u2022 Clique em uma opção para marcar a resposta correta.",
+                            ),
+                          ),
+                          const ListTile(
+                            contentPadding: EdgeInsets.only(left: 25),
+                            title: Text(
+                              "\u2022 Clique no marcador para salvar a sua resposta .",
+                            ),
+                          ),
                         ],
                       ),
                     ),
