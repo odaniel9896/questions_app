@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:questions_app/ui/components/appbar/custom_appbar.dart';
-import 'package:questions_app/ui/components/body/body_with_border.dart';
 import 'package:questions_app/ui/pages/home/components/tab_bar.dart';
 import 'package:questions_app/ui/pages/home/components/input_search.dart';
 import 'package:questions_app/ui/themes/text_styles.dart';

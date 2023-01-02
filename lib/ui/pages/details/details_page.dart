@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:questions_app/ui/components/appbar/custom_appbar.dart';
-import 'package:questions_app/ui/components/body/body_with_border.dart';
 import 'package:questions_app/ui/components/components.dart';
 import 'package:questions_app/ui/pages/details/components/components.dart';
 import 'package:questions_app/ui/themes/app_colors.dart';
