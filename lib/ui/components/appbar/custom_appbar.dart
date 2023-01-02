@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:questions_app/ui/components/components.dart';
 import 'package:questions_app/ui/themes/themes.dart';
 
-class CustomAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final Icon leadingIcon;
   final Icon finishIcon;
@@ -36,4 +36,8 @@ class CustomAppBar extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => const Size.fromHeight(56);
 }
