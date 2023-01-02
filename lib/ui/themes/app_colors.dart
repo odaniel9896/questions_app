@@ -5,6 +5,7 @@ class AppColors {
   static const dark = Color(0xFF333333);
   static const gray = Color(0xFFD4D4D4);
   static const fullGray = Color(0xFF999999);
+  static const textColor = Color(0xFF333333);
   static const white = Color(0xFFFFFFFF);
   static const yellow = Color(0xFFF2C94C);
   static const primaryGradient = <Color>[

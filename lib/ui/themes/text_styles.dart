@@ -35,4 +35,16 @@ class TextStyles {
     color: AppColors.fullGray,
     fontWeight: FontWeight.w400,
   );
+
+  static final appBarTitle = GoogleFonts.ubuntu(
+    fontSize: 18,
+    color: AppColors.white,
+    fontWeight: FontWeight.w500,
+  );
+
+  static final detailsTitle = GoogleFonts.nunito(
+    fontSize: 16,
+    color: AppColors.textColor,
+    fontWeight: FontWeight.w700,
+  );
 }
